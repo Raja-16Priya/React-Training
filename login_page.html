@@ -1,0 +1,36 @@
+<html>
+<body>
+<h1 style="font-size:40px">Login Page</h1>
+<input type="text" id="n1"><br>
+<br>
+<input type="text" id="n2"><br>
+<br>
+<button id="valid">VALIDATION</button>
+<h2 style="font-size:20px"; id="res"></h2>
+</body>
+<script>
+document.getElementById('valid').addEventListener('click',function(){
+var x= document.getElementById("n1").value;
+var y= document.getElementById("n2").value;
+console.log(x,y);
+var p="abc";
+var u="qwerty123";                                                                    
+if((y==p)&(x==u)){                                                                                                                                                     
+var a="Login Successful";                                                                      
+document.getElementById('res').innerText= `${a}`;  
+}
+else if((y==p)&(x!=u)){
+var b="Entered username is Incorrect- Login Failed";
+document.getElementById('res').innerText= `${b}`;
+}
+else if((y!=p)&(x==u)){                                                                         
+var c="Entered password is Incorrect- Login Failed";
+document.getElementById('res').innerText= `${c}`;
+}
+else{
+var d="Both the data is Incorrect- Login Failed ";                     
+document.getElementById('res').innerText= `${d}`;  
+}
+});
+</script>
+</html>
